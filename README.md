@@ -40,7 +40,7 @@ Before running the project, ensure you have the following installed:
     Your app will be live at [http://localhost:3000](http://localhost:3000) 🌐.
 
 ## Live Demo 🌟
-You can view the live demo of the project [here](https://admindashboardforasocialmedia-1v31--3000--d3acb9e1.local-credentialless.webcontainer.io).
+You can view the live demo of the project [here](https://socialmedia-dash.vercel.app).
 
 ## File Structure 📁
 
