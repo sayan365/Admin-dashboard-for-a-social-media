@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900">
       {/* Header */}
-      <header className="bg-blue-600 text-white p-6">
+      {/* <header className="bg-blue-600 text-white p-6">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center">
           <h1 className="text-3xl font-semibold">Admin Dashboard</h1>
           <nav className="space-x-6">
@@ -24,7 +24,7 @@ const HomePage = () => {
             </Link>
           </nav>
         </div>
-      </header>
+      </header> */}
 
       {/* Main Content */}
       <main className="flex-1 px-6 py-12">
