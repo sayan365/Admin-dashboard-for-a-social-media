@@ -1,4 +1,3 @@
-// Add the 'use client' directive at the top of your file
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -13,9 +12,17 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-} from 'recharts';  // Correct imports
+} from 'recharts';
 
-// Your component logic remains the same
+// Define the type for metrics data
+interface Metrics {
+  activeUser: number;
+  creator: number;
+  totalUser: number;
+  totalReferral: number;
+  chartData: { timestamp: string; count: number }[];
+}
+
 const UserManagement = () => {
   const [metrics, setMetrics] = useState<Metrics | null>(null); // Define metrics type
   const [loading, setLoading] = useState(true);
