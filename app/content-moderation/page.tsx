@@ -11,8 +11,19 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
+// Define the type for the contentMetrics data
+interface ContentMetrics {
+  totalPosts: number;
+  totalCategory: number;
+  totalPostShares: number;
+  totalViews: number;
+  totalPostBlocked: number;
+  totalPostDeleted: number;
+  chartData: { timestamp: string; count: number }[];
+}
+
 const ContentModeration = () => {
-  const [contentMetrics, setContentMetrics] = useState(null);
+  const [contentMetrics, setContentMetrics] = useState<ContentMetrics | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -23,17 +34,16 @@ const ContentModeration = () => {
         const metrics = data?.dashboard?.contentMetrics?.daily;
         setContentMetrics(metrics);
       } catch (err) {
-        // Correctly access the error message
         if (err instanceof Error) {
-          setError(err.message);  // Use `err.message` instead of `arr.message`
+          setError(err.message); // Correctly access the error message
         } else {
-          setError("An unknown error occurred.");
+          setError('An unknown error occurred.');
         }
       } finally {
         setLoading(false);
       }
     };
-  
+
     fetchMetrics();
   }, []);
 
@@ -66,7 +76,6 @@ const ContentModeration = () => {
       value: totalCategory,
       bgColor: 'bg-green-100',
     },
-
     { title: 'Post Shares', value: totalPostShares, bgColor: 'bg-purple-100' },
     { title: 'Total Views', value: totalViews, bgColor: 'bg-red-100' },
     { title: 'Blocked Posts', value: totalPostBlocked, bgColor: 'bg-gray-100' },
