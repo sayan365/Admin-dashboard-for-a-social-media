@@ -28,10 +28,11 @@ export default function RootLayout({
         <div className="flex min-h-screen relative">
           {/* Sidebar */}
           <div
-            className={`fixed top-0 left-0 h-full bg-gray-800 text-white z-40 transition-transform transform ${
+            className={`fixed top-0 left-0 h-full  bg-gray-800 text-white z-40 transition-transform transform ${
               isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
             } md:static md:translate-x-0 w-64`}
           >
+            
             <Sidebar />
           </div>
 

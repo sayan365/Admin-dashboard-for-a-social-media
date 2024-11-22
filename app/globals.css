@@ -16,6 +16,25 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .sidebar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .image-container {
+    position: relative;
+    width: 28%;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 36%;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -25,3 +44,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+
+
+
+
+

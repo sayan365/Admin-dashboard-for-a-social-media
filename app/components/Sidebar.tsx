@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Sidebar = () => {
   return (
-    <div className="bg-gray-800 text-white w-64 p-4 min-h-screen">
+    <div className="bg-gray-800 text-white w-64 p-4 min-h-screen sidebar-fixed">
       <h1 className="text-2xl font-bold mb-6">Admin Dashboard</h1>
       <ul className="space-y-4">
         <li className="hover:bg-gray-700 p-2 rounded">

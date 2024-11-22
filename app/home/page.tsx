@@ -4,30 +4,10 @@ import Link from 'next/link';
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900">
-      {/* Header */}
-      {/* <header className="bg-blue-600 text-white p-6">
-        <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-          <h1 className="text-3xl font-semibold">Admin Dashboard</h1>
-          <nav className="space-x-6">
-            <Link href="/dashboard" className="text-xl hover:text-gray-300">
-              Dashboard
-            </Link>
-            <Link href="/analytics" className="text-xl hover:text-gray-300">
-              Analytics
-            </Link>
-            <Link
-              href="/content-moderation"
-              className="text-xl hover:text-gray-300"
-            >
-              Content Moderation
-            </Link>
-          </nav>
-        </div>
-      </header> */}
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
 
       {/* Main Content */}
-      <main className="flex-1 px-6 py-12">
+      <main className="flex-1 px-6 py-12 relative z-10">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
             Welcome to Your Admin Dashboard
@@ -47,6 +27,10 @@ const HomePage = () => {
               </button>
             </Link>
           </div>
+          <div className="image-container">
+            <img src="https://img.freepik.com/free-vector/analyze-concept-illustration_114360-6491.jpg" alt="Analysis Concept" />
+          </div>
+
         </div>
       </main>
     </div>

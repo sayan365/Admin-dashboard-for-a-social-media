@@ -53,7 +53,7 @@ const UserManagement = () => {
     <div className="p-6 max-w-7xl mx-auto">
       {/* Overview Section */}
       <h2 className="text-2xl font-bold mb-4">User Management</h2>
-      <div className="grid grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="p-4 bg-blue-100 rounded shadow text-center">
           <h3 className="text-lg font-semibold">Total Users</h3>
           <p className="text-2xl font-bold">{metrics.totalUser}</p>
@@ -73,7 +73,7 @@ const UserManagement = () => {
       </div>
 
       {/* Visual Charts */}
-      <div className="grid grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Pie Chart for Active Users and Creators */}
         <div className="p-6 bg-white shadow rounded">
           <h3 className="text-lg font-bold mb-4">User Distribution</h3>
@@ -104,7 +104,7 @@ const UserManagement = () => {
           <h3 className="text-lg font-bold mb-4">User Activity Trends</h3>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={metrics.chartData}>
-              <XAxis dataKey="timestamp" />
+              <XAxis dataKey="timestamp" tick={{ fontSize: 12 }} />
               <YAxis />
               <Tooltip />
               <Line type="monotone" dataKey="count" stroke="#4CAF50" />
