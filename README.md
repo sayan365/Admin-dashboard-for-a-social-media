@@ -44,7 +44,7 @@ You can view the live demo of the project [here](https://admindashboardforasocia
 
 ## File Structure 📁
 
-. ├── components # Contains reusable UI components │ ├── Sidebar.tsx │ ├── Navbar.tsx │ └── DashboardCard.tsx ├── pages # Next.js pages │ ├── index.tsx # The main dashboard page │ ├── login.tsx # Login page (if applicable) │ └── analytics.tsx # Analytics page (for data visualization) ├── styles # Tailwind CSS setup │ ├── globals.css # Global styles │ └── tailwind.config.js ├── public # Static assets (images, icons, etc.) └── tsconfig.json # TypeScript configuration
+. ├── components #Contains reusable UI components │ ├── Sidebar.tsx │ ├── Navbar.tsx │ └── DashboardCard.tsx ├── pages # Next.js pages │ ├── index.tsx # The main dashboard page │ ├── login.tsx # Login page (if applicable) │ └── analytics.tsx # Analytics page (for data visualization) ├── styles # Tailwind CSS setup │ ├── globals.css # Global styles │ └── tailwind.config.js ├── public # Static assets (images, icons, etc.) └── tsconfig.json # TypeScript configuration
 
 markdown
 Copy code
