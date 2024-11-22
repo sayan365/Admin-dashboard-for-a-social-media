@@ -14,7 +14,7 @@ import {
 const ContentModeration = () => {
   const [contentMetrics, setContentMetrics] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchMetrics = async () => {
@@ -23,12 +23,17 @@ const ContentModeration = () => {
         const metrics = data?.dashboard?.contentMetrics?.daily;
         setContentMetrics(metrics);
       } catch (err) {
-        setError(err.message);
+        // Correctly access the error message
+        if (err instanceof Error) {
+          setError(err.message);  // Use `err.message` instead of `arr.message`
+        } else {
+          setError("An unknown error occurred.");
+        }
       } finally {
         setLoading(false);
       }
     };
-
+  
     fetchMetrics();
   }, []);
 
